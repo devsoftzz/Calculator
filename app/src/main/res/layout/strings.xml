@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+<HorizontalScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:scrollbarFadeDuration="0"
+    android:id="@+id/scroll1"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:maxLines="1"
+        android:textColor="#fff"
+        android:textSize="50sp" />
+</HorizontalScrollView>
+
+<HorizontalScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:scrollbarFadeDuration="0"
+    android:id="@+id/scroll2"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    >
+    <TextView
+        android:id="@+id/expression"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:maxLines="1"
+        android:textColor="#fff"
+        android:text=""
+        android:gravity="right"
+        android:paddingBottom="20dp"
+        android:textSize="40sp"/>
+</HorizontalScrollView>
+
+</LinearLayout>
