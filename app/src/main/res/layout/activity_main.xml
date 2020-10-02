@@ -5,12 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="bottom"
-    android:background="#000"
     android:gravity="bottom"
     android:weightSum="3"
     android:orientation="vertical"
     tools:context=".MainActivity">
-    <LinearLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -18,38 +17,43 @@
         android:layout_gravity="bottom">
 
         <HorizontalScrollView
+            android:id="@+id/scroll1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:id="@+id/scroll1">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
             <TextView
                 android:id="@+id/result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="right"
                 android:maxLines="1"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textSize="50sp" />
         </HorizontalScrollView>
 
         <HorizontalScrollView
+            android:id="@+id/scroll2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:id="@+id/scroll2">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scroll1">
+
             <TextView
                 android:id="@+id/expression"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:textColor="#fff"
                 android:gravity="right"
+                android:maxLines="1"
                 android:paddingTop="10dp"
-                android:paddingBottom="20dp"
-                android:textSize="40sp"/>
+                android:textColor="#000"
+                android:textSize="40sp" />
         </HorizontalScrollView>
 
-    </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
 
 
     <GridLayout
